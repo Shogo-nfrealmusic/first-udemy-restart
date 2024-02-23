@@ -6,15 +6,18 @@
 
 .child {
   background-color: orange;
-  width: 100px;
-  height: 100px;
+  // width: 100px;
+  // height: 100px;
   font-weight: 600;
+  flex-grow: 1;
 }
 .child.v2 {
   background-color: palevioletred;
+  flex-grow: 2;
 }
 .child.v3 {
   background-color: rebeccapurple;
+  flex-grow: 3;
 }
 
 /**
@@ -32,6 +35,7 @@
 // .parent {
 // }
 // .child {
+//     width: 100px;
 //     margin: 0 auto;
 // }
 
@@ -48,9 +52,9 @@
 //   transform: translate(-50%, -50%);
 // }
 
-// .parent {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: flex-end;
-// }
+.parent {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+}

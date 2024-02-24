@@ -1,5 +1,8 @@
+@use "scss:math";
+@use "child" as *;
+
 h1 {
-    background: orange;
-    font-size: 15px;
+    background: $cOrange;
+    font-size: math.div(30px, 2);
 }
 

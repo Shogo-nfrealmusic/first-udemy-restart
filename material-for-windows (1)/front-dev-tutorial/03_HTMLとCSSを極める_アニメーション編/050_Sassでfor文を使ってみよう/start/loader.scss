@@ -10,14 +10,19 @@ $cBlack: black;
     background-color: $cBlack;
     border-radius: 50%;
     animation: sk-bouncedelay 1.4s infinite;
-  }
 
-  & .bounce1 {
-    animation-delay: -0.32s;
-  }
+    @for $i from 1 through 2 {
+      &:nth-child(#{$i}) {
+        animation-delay: calc( -0.32s / $i);
+      }
+    }
 
-  & .bounce2 {
-    animation-delay: -0.16s;
+    // &:nth-child(1) {
+    //   animation-delay: -0.32s;
+    // }
+    // &:nth-child(2) {
+    //   animation-delay: -0.16s;
+    // }
   }
 }
 

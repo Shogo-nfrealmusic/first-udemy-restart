@@ -1,12 +1,61 @@
+$breakpoints: (
+  // スマホ横向き
+  'sm': '(min-width: 480px)',
+  // タブレット縦向き
+  'md': '(min-width: 600px)',
+  // ノートPC等の小さなPC
+  'lg': '(min-width: 960px)',
+  // デスクトップPC
+  'xl': '(min-width: 1280px)'
+);
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 // モバイル用のスタイル
 h1 {
   color: red;
   background: yellow;
+
+  @include mq(sm) {
+    color: blue;
+  }
+
+  // @media (min-width: 480px) {
+  //   color: blue;
+  // }
+
+  @include mq(md) {
+    color: purple;
+  }
+
+  // @media (min-width: 600px) {
+  //   color: purple;
+  // }
+
+  @include mq(lg) {
+    color: green;
+  }
+
+  // @media (min-width: 960px) {
+  //   color: green;
+  // }
+
+  @include mq(xl) {
+    color: orange;
+  }
+
+  // @media (min-width: 1280px) {
+  //   color: orange;
+  // }
 }
 
 // デスクトップ用のスタイル
-@media screen and (min-width: 601px) {
-  h1 {
-    color: blue;
-  }
-}
+// @media screen and (min-width: 601px) {
+//   h1 {
+//     color: blue;
+//   }
+// }

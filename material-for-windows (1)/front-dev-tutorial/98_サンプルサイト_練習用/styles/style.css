@@ -1015,4 +1015,30 @@ img {
 }
 .logo__world {
   color: #904669;
+}
+
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 1280px) {
+  .side {
+    display: block;
+  }
+}
+.side.left {
+  left: 50px;
+}
+.side.left .side__inner {
+  transform-origin: top left;
+  transform: rotate(-90deg);
+}
+.side.right {
+  right: 50px;
+}
+.side.right .side__inner {
+  transform-origin: top right;
+  transform: rotate(90deg);
 }/*# sourceMappingURL=style.css.map */

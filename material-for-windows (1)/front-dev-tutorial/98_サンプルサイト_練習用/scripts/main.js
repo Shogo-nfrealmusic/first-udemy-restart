@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    new Main;
-});
 
 class Main {
     constructor() {
@@ -71,4 +68,6 @@ class Main {
 
 
 }
+
+new Main;
 

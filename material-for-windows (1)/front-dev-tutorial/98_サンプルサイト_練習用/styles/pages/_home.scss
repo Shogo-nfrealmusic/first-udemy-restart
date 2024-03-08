@@ -67,8 +67,8 @@ main {
         margin: 10px;
 
         @include mq(md) {
-            margin-left: 0;
-            margin-right: 30px;
+            margin-left: 30px;
+            margin-right: 0;
         }
 
         & > a {
@@ -87,6 +87,10 @@ main {
         }
 
     }
+}
+
+.hero {
+    @extend .pb-lg;
 }
 
 .travel {
